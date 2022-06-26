@@ -22,8 +22,15 @@ jobs:
         pip install pytz
         pip install PyGithub
         pip install python-dateutil
+        pip install requests
+        pip install python-telegram-bot
     - name: Run Crawler
       run: |
         python findCheapMacbook.py
       env:
         GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        CHAT_ID: ${{ secrets.CHAT_ID }} 
+        EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }} 
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }} 
+        EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
