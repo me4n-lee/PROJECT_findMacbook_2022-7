@@ -101,7 +101,7 @@ print(issue_title)
 print(issue_body)
 
 if issue_body != '':
-    send(issue_title + '\n' + issue_body)
+    #send(issue_title + '\n' + issue_body) #for telegram bot
 
 if issue_body != '':
     send_multipart_mail(sender, receiver, sender, password,  issue_title, {'plain': issue_body, 'html': issue_body})
