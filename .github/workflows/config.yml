@@ -1,0 +1,30 @@
+name: 'me4n-macbook'
+
+on:
+# schedule:
+#    - cron: '0 9 * * *'
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  run:
+    runs-on: Mac OS
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python
+      uses: actions/setup-python@v1
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install beautifulsoup4
+        pip install pytz
+        pip install PyGithub
+        pip install python-dateutil
+    - name: Run Crawler
+      run: |
+        python crawler.py
+      env:
+        GIT_TOKEN: ${{ secrets.GithubToken }}
+      
