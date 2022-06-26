@@ -89,7 +89,7 @@ issue_body = ''
 for row in article_list:
     title = row.select('h3 > a')[0]
     item = " " +  str(title).replace('href="','href="' + site).replace("\n", "").replace('  ', '').strip() + '<br/>\n'
-    if '15.4형 MacBook Pro' in str(title) or '16형 MacBook Pro' in str(title) :
+    if '15.4형 MacBook Pro' in str(title) or '16형 MacBook Pro' in str(title) or 'mini' in str(title):
         issue_body += item
     else: 
         print('[filtered] 2 ', item)
