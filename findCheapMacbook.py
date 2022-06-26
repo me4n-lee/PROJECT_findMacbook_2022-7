@@ -23,6 +23,7 @@ issue_body = ''
 
 for row in article_list:
     title = row.select('h3 > a')[0]
+    published_at = row.select('div.date-created span.timeago')[0].get_text()
     item = " " +  str(title).replace('href="','href="' + site).replace("\n", "").replace('  ', '').strip() + '<br/>\n'
     if '15.4형 MacBook Pro' in str(title) or '16형 MacBook Pro' in str(title) :
         issue_body += item
