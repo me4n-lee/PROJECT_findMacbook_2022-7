@@ -6,7 +6,7 @@ from pytz import timezone
 from dateutil.parser import parse
 import os
 import requests as rq
-from noti import send
+#from noti import send
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -104,7 +104,7 @@ if issue_body != '':
     send(issue_title + '\n' + issue_body)
 
 if issue_body != '':
-    send_multipart_mail(sender, receiver, sender, password,  issue_title, {'plain': issue_body1, 'html': issue_body2})
+    send_multipart_mail(sender, receiver, sender, password,  issue_title, {'plain': issue_body, 'html': issue_body})
 
 GITHUB_TOKEN = os.environ['GIT_TOKEN']
 REPO_NAME = "me4n-findmacbook"
