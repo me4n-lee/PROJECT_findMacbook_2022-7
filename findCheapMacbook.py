@@ -1,5 +1,6 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+from github import Github, Issue
 import datetime
 from pytz import timezone
 from dateutil.parser import parse
