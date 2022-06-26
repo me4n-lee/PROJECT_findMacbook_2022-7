@@ -100,7 +100,7 @@ issue_title = "[리퍼비시] 맥북 15인치이상 리스트 모음(%s)" % (tod
 print(issue_title)
 print(issue_body)
 
-if issue_body != '':
+#if issue_body != '': #for telegram bot
     #send(issue_title + '\n' + issue_body) #for telegram bot
 
 if issue_body != '':
