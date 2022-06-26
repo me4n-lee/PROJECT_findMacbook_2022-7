@@ -39,7 +39,7 @@ print(issue_title)
 print(issue_body)
 
 GITHUB_TOKEN = os.environ['GIT_TOKEN']
-REPO_NAME = "findmacbook"
+REPO_NAME = "me4n-findmacbook"
 repo = Github(GITHUB_TOKEN).get_user().get_repo(REPO_NAME)
 if issue_body != '' and REPO_NAME == repo.name:
     res = repo.create_issue(title=issue_title, body=issue_body)
