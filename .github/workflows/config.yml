@@ -24,7 +24,7 @@ jobs:
         pip install python-dateutil
     - name: Run Crawler
       run: |
-        python crawler.py
+        python findCheapMacbook.py
       env:
         GIT_TOKEN: ${{ secrets.GithubToken }}
       
