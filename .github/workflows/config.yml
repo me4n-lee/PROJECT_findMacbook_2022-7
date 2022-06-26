@@ -26,4 +26,4 @@ jobs:
       run: |
         python findCheapMacbook.py
       env:
-        GIT_TOKEN: ${{ secrets.GithubToken }
+        GIT_TOKEN: ${{ secrets.GithubToken }}
