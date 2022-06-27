@@ -94,7 +94,7 @@ for row in article_list:
     else: 
         print('[filtered] 2 ', item)
 
-print('———————————————————————————————————')
+print('—————————————————conclusion——————————————————')
 
 issue_title = "[리퍼비시] 맥북 15인치이상 리스트 모음(%s)" % (today.strftime("%Y년 %m월 %d일 %H시"))
 print(issue_title)
