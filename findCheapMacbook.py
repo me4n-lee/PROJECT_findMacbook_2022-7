@@ -81,7 +81,7 @@ def isDateInRange(created_at):
     return today > created_at and created_at > yesterday
 
 site = 'https://www.apple.com/'
-res = urlopen(site + '/kr/shop/refurbished/mac/15%ED%98%95-16%ED%98%95-macbook-pro')
+res = urlopen(site + '/kr/shop/refurbished/mac/macbook-pro')
 soup = BeautifulSoup(res, 'html.parser')
 article_list = soup.select('.rf-refurb-category > div > div > div > ul > li')
 issue_body = ''
