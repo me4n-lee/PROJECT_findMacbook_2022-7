@@ -1,12 +1,14 @@
 name: 'me4n-macbook'
 
 on:
-# schedule:
+ schedule:
 #    - cron: '0 9 * * *'
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    - cron: '30 23 * * 0-4'
+#    - cron: '*/30 * * * *'
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
 
 jobs:
   run:
